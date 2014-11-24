@@ -37,7 +37,8 @@ public class BusFactory {
 			temp = buses[i].split(",");
 			if (Integer.parseInt(temp[BUS_LINEID].split(":")[1]) == 0)
 				continue;
-			Bus bus = new Bus(Integer.parseInt(temp[BUS_ID].split(":")[1]),Integer.parseInt(temp[BUS_LINEID].split(":")[1]),Double.parseDouble(temp[LAT_INDEX].split(":")[1]),Double.parseDouble(temp[LONG_INDEX].split(":")[1]),temp[TIMESTAMP].split(":")[1]);
+			String tempTimeStamp = temp[TIMESTAMP].split(":")[1] + ":" + temp[TIMESTAMP].split(":")[2] + ":" + temp[TIMESTAMP].split(":")[3];
+			Bus bus = new Bus(Integer.parseInt(temp[BUS_ID].split(":")[1]),Integer.parseInt(temp[BUS_LINEID].split(":")[1]),Double.parseDouble(temp[LAT_INDEX].split(":")[1]),Double.parseDouble(temp[LONG_INDEX].split(":")[1]),tempTimeStamp);
 			busList.add(bus);
 		}
 		
