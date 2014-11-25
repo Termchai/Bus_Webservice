@@ -1,4 +1,4 @@
-package sabaii.trekking.entity;
+package t3s.smartbus.entity;
 import java.io.Serializable;
 
 import javax.persistence.Entity;

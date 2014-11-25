@@ -1,4 +1,6 @@
-package memory;
+package t3s.smartbus.memory;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,10 +9,14 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
-import sabaii.trekking.entity.Bus;
+import javax.swing.Timer;
+
+import t3s.smartbus.entity.Bus;
 
 
 public class BusMemoryCache {
+	
+	private final int UPDATE_INTERVAL = 15000;
 	
 	private List<Bus> busList;
 	private URL url;
@@ -33,6 +39,16 @@ public class BusMemoryCache {
 		this.url = url;
 		busFactory = BusFactory.getInstance();
 		busList = busFactory.parseStringToBus(getTextFromUrl());
+		
+		Timer timer = new Timer(UPDATE_INTERVAL, new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Update position");
+				busList = busFactory.parseStringToBus(getTextFromUrl());
+			}
+		});
+		timer.start();
 	}
 
 	public String getTextFromUrl()
