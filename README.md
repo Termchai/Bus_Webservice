@@ -43,3 +43,5 @@ Precondition: A user launch the application and the device has internet connecti
 * Supavit Kongwudhikunakorn 5510546671
 * Suttanan Charoenpanich 5510547031
 * Termchai Sadsangchan 5510546042
+
+* Team Name: T3S
