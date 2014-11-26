@@ -20,7 +20,8 @@ Precondition: A user launch the application and the device has internet connecti
 * See my own current location process: User select the function to see the overview of the campus. Finally, the user can see his current location in the campus.
 * Get notification process: The user select notification function in the application. The user select his desired bus stop. The user select the desired bus line. The user enter the range (how far between the desired bus and the bus stop). Once everything is input, the user finish the process.
 * Notify user process: Once the bus of the desired bus line arrives in the specified range from the bus stop, the application would notify user either by vibration of the smart devices or ringing sound so user would know that the bus almost arrives at the stop.
-* See buses locations process: User select top view function of the application. User can see overview of buses locations around the campus.
+* See buses locations process: User selects top view function of the application. User can see overview of buses locations around the campus.
+* See buses lines locations process: User selects top view function of the application. After that, user selects filter buses by line id.
 
 ## API
 
