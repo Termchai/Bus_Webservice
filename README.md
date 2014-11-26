@@ -25,7 +25,7 @@ Precondition: A user launch the application and the device has internet connecti
 
 ## API
 
-[API](https://github.com/Termchai/Bus_Webservice/wiki/Smart-Bus-Service-API-Specification)
+[API](https://docs.google.com/document/d/1bQ04_zdIkMoU-EarHBBjsYQv5mKZXpe37UpgESOocSA/edit)
 
 ## Mock-ups
 ...coming soon...
