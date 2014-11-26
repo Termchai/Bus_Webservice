@@ -22,7 +22,7 @@ Precondition: A user launch the application and the device has internet connecti
 * Notify user process: Once the bus of the desired bus line arrives in the specified range from the bus stop, the application would notify user either by vibration of the smart devices or ringing sound so user would know that the bus almost arrives at the stop.
 
 ## API
-Coming very soon....
+[API](https://github.com/Termchai/Bus_Webservice/wiki/Smart-Bus-Service-API-Specification)
 ## Example Request
 *
 
