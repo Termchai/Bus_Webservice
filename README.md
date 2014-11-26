@@ -24,7 +24,7 @@ Precondition: A user launch the application and the device has internet connecti
 ## API
 Coming very soon....
 ## Example Request
-
+*
 
 ## How is it?
 * JAX-RS RESTful web service.
