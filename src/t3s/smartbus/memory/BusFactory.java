@@ -1,9 +1,9 @@
-package memory;
+package t3s.smartbus.memory;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import sabaii.trekking.entity.Bus;
+import t3s.smartbus.entity.Bus;
 
 public class BusFactory {
 	private static BusFactory instance;

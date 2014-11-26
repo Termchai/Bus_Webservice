@@ -1,4 +1,4 @@
-package sabaii.trekking.resource;
+package t3s.smartbus.resource;
 
 
 import java.net.URI;
@@ -26,14 +26,13 @@ import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.core.UriInfo;
 import javax.xml.bind.JAXBElement;
 
-import memory.BusMemoryCache;
-
 import org.eclipse.jetty.http.HttpHeader;
 
-import sabaii.trekking.entity.Bus;
+import t3s.smartbus.entity.Bus;
+import t3s.smartbus.memory.BusMemoryCache;
 
-@Path("/products")
-public class ProductResource {
+@Path("/busesposition")
+public class BusResource {
 	private BusMemoryCache cache = BusMemoryCache.getInstance(null);
 	
 	@Context

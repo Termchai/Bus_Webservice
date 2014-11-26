@@ -1,19 +1,14 @@
-package sabaii.trekking.main;
+package t3s.smartbus.main;
 
 import java.net.URL;
-
-import memory.BusMemoryCache;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.glassfish.jersey.server.ServerProperties;
 
-/**
- * class main to run webservice
- * @author Sabaii Soft. SKE10
- *
- */
+import t3s.smartbus.memory.BusMemoryCache;
+
 public class Main {
 	
 	
@@ -31,7 +26,7 @@ public class Main {
 		server = new Server( port );
 		ServletContextHandler context = new ServletContextHandler( ServletContextHandler.SESSIONS );
 		ServletHolder holder = new ServletHolder( org.glassfish.jersey.servlet.ServletContainer.class );
-		holder.setInitParameter(ServerProperties.PROVIDER_PACKAGES, "sabaii.trekking.resource");
+		holder.setInitParameter(ServerProperties.PROVIDER_PACKAGES, "t3s.smartbus.resource");
 		context.addServlet( holder, "/*" );
 		server.setHandler( context );
 		System.out.println("Starting Jetty server on port " + port);
