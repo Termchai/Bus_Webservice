@@ -33,12 +33,6 @@ Precondition: A user launch the application and the device has internet connecti
 ## Stakeholder
 * User (students, faculties, staffs)
 
-## Example Request
-*
-
-## How is it?
-* JAX-RS RESTful web service.
-
 ## Contributors
 * Sarit Suriyasangpetch 5510546191
 * Supavit Kongwudhikunakorn 5510546671
