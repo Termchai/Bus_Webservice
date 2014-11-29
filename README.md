@@ -28,7 +28,7 @@ Precondition: A user launch the application and the device has internet connecti
 [API](https://docs.google.com/document/d/1bQ04_zdIkMoU-EarHBBjsYQv5mKZXpe37UpgESOocSA/edit)
 
 ## Mock-ups
-...coming soon...
+[MOCK-UPs](...link...)
 
 ## Stakeholder
 * User (students, faculties, staffs)
