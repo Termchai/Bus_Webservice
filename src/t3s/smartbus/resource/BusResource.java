@@ -53,7 +53,7 @@ public class BusResource {
 
 	@GET
 	@Produces (MediaType.APPLICATION_XML)
-	public Response getProducts()
+	public Response getAllBuses()
 	{
 		GenericEntity<List<Bus>> entity;
 		entity = new GenericEntity<List<Bus>>(cache.findAll()) {};
