@@ -30,6 +30,11 @@ import org.eclipse.jetty.http.HttpHeader;
 
 import t3s.smartbus.entity.Bus;
 import t3s.smartbus.memory.BusMemoryCache;
+/**
+ * 
+ * @author Termchai, Supavit
+ *
+ */
 
 @Path("/busesposition")
 public class BusResource {
@@ -51,6 +56,31 @@ public class BusResource {
 //		return Response.ok(p).tag(new EntityTag(p.hashCode()+"")).build();
 //	}
 
+	/**
+	 * Get all buses of particular line number.
+	 * @param id 
+	 * @return
+	 */
+	@GET
+	@Path("{number:\\d*}")
+	@Produces (MediaType.APPLICATION_XML)
+	public Response getBusesByLineNumber(@PathParam("number") long number){
+		List<Bus> busList = cache.findAll();
+		List<Bus> busLine = new ArrayList<Bus>();
+		for(Bus b : busList){
+			if(b.getBusLineNumber() == number){
+				busLine.add(b);
+			}
+		}
+		GenericEntity<List<Bus>> entity = new GenericEntity<List<Bus>>(busLine){};
+		System.out.println(entity.toString());
+		return Response.ok(entity).build();
+	}
+	
+	/**
+	 * Get all buses available at that time.
+	 * @return HttpStatus Code
+	 */
 	@GET
 	@Produces (MediaType.APPLICATION_XML)
 	public Response getAllBuses()

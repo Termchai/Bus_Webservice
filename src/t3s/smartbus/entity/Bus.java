@@ -26,7 +26,7 @@ public class Bus implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO) 
 	private long id;
 	
-	private int busLineID ;
+	private int busLineNumber;
 	private double lat, lon;
 	private String timestamp;
 	
@@ -44,12 +44,12 @@ public class Bus implements Serializable {
 		return serialVersionUID;
 	}
 
-	public int getBusLineID() {
-		return busLineID;
+	public int getBusLineNumber() {
+		return busLineNumber;
 	}
 
-	public void setBusLineID(int busLineID) {
-		this.busLineID = busLineID;
+	public void setBusLineNumber(int busLineNumber) {
+		this.busLineNumber = busLineNumber;
 	}
 
 	public double getLat() {
@@ -76,9 +76,9 @@ public class Bus implements Serializable {
 		this.timestamp = timestamp;
 	}
 
-	public Bus(int busID, int busLineID, double lat, double lon, String timestamp) {
+	public Bus(int busID, int busLineNumber, double lat, double lon, String timestamp) {
 		this.id = busID;
-		this.busLineID = busLineID;
+		this.busLineNumber = busLineNumber;
 		this.lat = lat;
 		this.lon = lon;
 		this.timestamp = timestamp;
@@ -86,7 +86,7 @@ public class Bus implements Serializable {
 
 	@Override
 	public String toString() {
-		return "ID:" + id + " Line:" + busLineID + " Lat:" + lat + " Long:" + lon + " Time:" + timestamp + "\n";
+		return "ID:" + id + " Line:" + busLineNumber + " Lat:" + lat + " Long:" + lon + " Time:" + timestamp + "\n";
 	}
 	
 	public boolean equals(Object other) {

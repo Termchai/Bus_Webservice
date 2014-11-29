@@ -1,10 +1,12 @@
 package t3s.smartbus.main;
 
+import java.net.URI;
 import java.net.URL;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
+import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
 
 import t3s.smartbus.memory.BusMemoryCache;
