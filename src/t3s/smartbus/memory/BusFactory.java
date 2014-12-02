@@ -5,6 +5,12 @@ import java.util.List;
 
 import t3s.smartbus.entity.Bus;
 
+/**
+ * Factory that is responsible for creating
+ * 		bus object.
+ * @author Termchai
+ *
+ */
 public class BusFactory {
 	private static BusFactory instance;
 	private final int LAT_INDEX = 0;

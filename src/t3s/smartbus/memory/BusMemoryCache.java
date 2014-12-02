@@ -13,7 +13,11 @@ import javax.swing.Timer;
 
 import t3s.smartbus.entity.Bus;
 
-
+/**
+ * Cache of the bus.
+ * @author Termchai
+ *
+ */
 public class BusMemoryCache {
 	
 	private final int UPDATE_INTERVAL = 15000;

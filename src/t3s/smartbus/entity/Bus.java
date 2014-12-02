@@ -11,6 +11,14 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
+
+/**
+ * Bus with bus id, bus line number, location of the bus
+ * 		with latitude, longitude, and timestamp.
+ * @author Termchai, Supavit
+ *
+ */
+
 @XmlRootElement(name="bus")
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
@@ -27,7 +35,8 @@ public class Bus implements Serializable {
 	private long id;
 	
 	private int busLineNumber;
-	private double lat, lon;
+	private double latitude;
+	private double longitude;
 	private String timestamp;
 	
 	public Bus() {}
@@ -52,20 +61,20 @@ public class Bus implements Serializable {
 		this.busLineNumber = busLineNumber;
 	}
 
-	public double getLat() {
-		return lat;
+	public double getLatitude() {
+		return this.latitude;
 	}
 
-	public void setLat(double lat) {
-		this.lat = lat;
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
 	}
 
-	public double getLon() {
-		return lon;
+	public double getLongitude() {
+		return longitude;
 	}
 
-	public void setLon(double lon) {
-		this.lon = lon;
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
 	}
 
 	public String getTimestamp() {
@@ -76,17 +85,17 @@ public class Bus implements Serializable {
 		this.timestamp = timestamp;
 	}
 
-	public Bus(int busID, int busLineNumber, double lat, double lon, String timestamp) {
+	public Bus(int busID, int busLineNumber, double latitude, double longitude, String timestamp) {
 		this.id = busID;
 		this.busLineNumber = busLineNumber;
-		this.lat = lat;
-		this.lon = lon;
+		this.latitude = latitude;
+		this.longitude = longitude;
 		this.timestamp = timestamp;
 	}
 
 	@Override
 	public String toString() {
-		return "ID:" + id + " Line:" + busLineNumber + " Lat:" + lat + " Long:" + lon + " Time:" + timestamp + "\n";
+		return "ID:" + id + " Line:" + busLineNumber + " Lat:" + latitude + " Long:" + longitude + " Time:" + timestamp + "\n";
 	}
 	
 	public boolean equals(Object other) {

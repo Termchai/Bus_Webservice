@@ -55,11 +55,32 @@ public class BusResource {
 //		
 //		return Response.ok(p).tag(new EntityTag(p.hashCode()+"")).build();
 //	}
+	
+	/**
+	 * Get all buses by bus id number.
+	 * @param id the id number of bus
+	 * @return HttpStatusCode
+	 */
+	@GET
+	@Path("{id:\\d*}")
+	@Produces (MediaType.APPLICATION_XML)
+	public Response getBusByIdNumber(@PathParam("id") long id){
+		List<Bus> busList = cache.findAll();
+		List<Bus> busid = new ArrayList<Bus> ();
+		for(Bus b : busList){
+			if(b.getId() == id){
+				busid.add(b);
+			}
+		}
+		GenericEntity<List<Bus>> entity = new GenericEntity<List<Bus>>(busid){};
+		System.out.println(entity.toString());
+		return Response.ok(entity).build();
+	}
 
 	/**
 	 * Get all buses of particular line number.
 	 * @param id 
-	 * @return
+	 * @return HttpStatusCode
 	 */
 	@GET
 	@Path("{number:\\d*}")
