@@ -36,7 +36,7 @@ import t3s.smartbus.memory.BusMemoryCache;
  *
  */
 
-@Path("/busesposition")
+@Path("/bus")
 public class BusResource {
 	private BusMemoryCache cache = BusMemoryCache.getInstance(null);
 	
@@ -63,7 +63,7 @@ public class BusResource {
 	 */
 	@GET
 	@Path("{id:\\d*}")
-	@Produces (MediaType.APPLICATION_XML)
+	@Produces ( {MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON} )
 	public Response getBusByIdNumber(@PathParam("id") long id){
 		List<Bus> busList = cache.findAll();
 		List<Bus> busid = new ArrayList<Bus> ();
@@ -83,13 +83,13 @@ public class BusResource {
 	 * @return HttpStatusCode
 	 */
 	@GET
-	@Path("{number:\\d*}")
-	@Produces (MediaType.APPLICATION_XML)
-	public Response getBusesByLineNumber(@PathParam("number") long number){
+	@Path("line/{line: \\d*}")
+	@Produces ( {MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON} )
+	public Response getBusesByLineNumber(@PathParam("line") long line){
 		List<Bus> busList = cache.findAll();
 		List<Bus> busLine = new ArrayList<Bus>();
 		for(Bus b : busList){
-			if(b.getBusLineNumber() == number){
+			if(b.getLineNumber() == line){
 				busLine.add(b);
 			}
 		}
@@ -103,7 +103,7 @@ public class BusResource {
 	 * @return HttpStatus Code
 	 */
 	@GET
-	@Produces (MediaType.APPLICATION_XML)
+	@Produces ( {MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON} )
 	public Response getAllBuses()
 	{
 		GenericEntity<List<Bus>> entity;
