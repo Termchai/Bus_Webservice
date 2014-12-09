@@ -32,9 +32,11 @@ public class Bus implements Serializable {
 	@XmlAttribute
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO) 
+//TODO Why long?  There aren't that many buses.
 	private long id;
-	
-	private int busLineNumber;
+
+//TODO why name attribute "busLineNumber"? You don't name latitude as "busLatitude".
+	private int    lineNumber;
 	private double latitude;
 	private double longitude;
 	private String timestamp;
@@ -53,12 +55,12 @@ public class Bus implements Serializable {
 		return serialVersionUID;
 	}
 
-	public int getBusLineNumber() {
-		return busLineNumber;
+	public int getLineNumber() {
+		return lineNumber;
 	}
 
-	public void setBusLineNumber(int busLineNumber) {
-		this.busLineNumber = busLineNumber;
+	public void setLineNumber(int busLineNumber) {
+		this.lineNumber = busLineNumber;
 	}
 
 	public double getLatitude() {
@@ -87,7 +89,7 @@ public class Bus implements Serializable {
 
 	public Bus(int busID, int busLineNumber, double latitude, double longitude, String timestamp) {
 		this.id = busID;
-		this.busLineNumber = busLineNumber;
+		this.lineNumber = busLineNumber;
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.timestamp = timestamp;
@@ -95,7 +97,7 @@ public class Bus implements Serializable {
 
 	@Override
 	public String toString() {
-		return "ID:" + id + " Line:" + busLineNumber + " Lat:" + latitude + " Long:" + longitude + " Time:" + timestamp + "\n";
+		return "ID:" + id + " Line:" + lineNumber + " Lat:" + latitude + " Long:" + longitude + " Time:" + timestamp + "\n";
 	}
 	
 	public boolean equals(Object other) {
@@ -106,10 +108,16 @@ public class Bus implements Serializable {
 	
 
 
-
+	/**
+	 * Use the bus id as hashcode.
+	 * But there is NO REASON to convert it to String! 
+	 * Its a number, so compute hashcode based on number.
+	 */
 	@Override
 	public int hashCode() {
-		return (id+"").hashCode();
+// This is silly.  Please read about hashCode.
+//		return (id+"").hashCode();
+		return (int)id;
 	}
 
 
