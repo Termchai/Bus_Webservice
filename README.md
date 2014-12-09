@@ -31,7 +31,7 @@ Precondition: A user launch the application and the device has internet connecti
 [MOCK-UPs](...link...)
 
 ## Stakeholders
-* User (students, faculties, staffs)
+* User (students, faculty, staff)
 
 ## Contributors
 * Sarit Suriyasangpetch 5510546191
