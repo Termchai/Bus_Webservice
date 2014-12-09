@@ -31,7 +31,7 @@ Precondition: A user launch the application and the device has internet connecti
 [MOCK-UPs](...link...)
 
 ## Stakeholders
-* User (students, faculty, staff)
+* Kasetsart Students,Staff, and visitors who use the KU bus service
 
 ## Contributors
 * Sarit Suriyasangpetch 5510546191
