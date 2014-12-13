@@ -9,8 +9,7 @@ import org.glassfish.jersey.server.ServerProperties;
 
 import t3s.smartbus.memory.BusMemoryCache;
 
-public class Main {
-	
+public class WebServiceMain {
 	
 	 /*port of the webservice */
 	static final int PORT = 8080;

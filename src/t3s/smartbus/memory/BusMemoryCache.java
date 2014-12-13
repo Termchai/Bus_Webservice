@@ -11,6 +11,9 @@ import java.util.List;
 
 import javax.swing.Timer;
 
+import org.eclipse.jetty.websocket.server.WebSocketHandler;
+
+import WebSocket.MyWebSocketHandler;
 import t3s.smartbus.entity.Bus;
 
 
@@ -22,6 +25,7 @@ public class BusMemoryCache {
 	private URL url;
 	private BusFactory busFactory;
 	private static BusMemoryCache instance;
+	private WebSocketHandler wsHandler;
 	
 	public static BusMemoryCache getInstance(URL url)
 	{
@@ -46,6 +50,13 @@ public class BusMemoryCache {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Update position");
 				busList = busFactory.parseStringToBus(getTextFromUrl());
+				try {
+					if(MyWebSocketHandler.isRunning)
+						MyWebSocketHandler.broadcastBusesPosition(busList);
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		timer.start();
@@ -75,6 +86,10 @@ public class BusMemoryCache {
 
 	public List<Bus> getBusList() {
 		return busList;
+	}
+
+	public void setWebSocketHandler(WebSocketHandler wsHandler) {
+		this.wsHandler = wsHandler;
 	}
 	
 }
