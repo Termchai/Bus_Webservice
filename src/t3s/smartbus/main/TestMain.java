@@ -42,7 +42,7 @@ public class TestMain {
 		{
 			Bus bus = new Bus();
 			String[] temp2 = temp[i].split(">");
-			bus.setId(Long.parseLong(temp2[0].split("\"")[1]));
+			bus.setId(Integer.parseInt(temp2[0].split("\"")[1]));
 			bus.setLineNumber((Integer.parseInt(temp2[2].split("<")[0])));
 			bus.setLatitude((Double.parseDouble(temp2[4].split("<")[0])));
 			bus.setLongitude(Double.parseDouble(temp2[6].split("<")[0]));

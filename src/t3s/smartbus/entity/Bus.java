@@ -32,7 +32,7 @@ public class Bus implements Serializable {
 	@XmlAttribute
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO) 
-	private long id;
+	private int id;
 	
 	private int lineNumber;
 	private double latitude;
@@ -45,7 +45,7 @@ public class Bus implements Serializable {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -109,7 +109,7 @@ public class Bus implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return (id+"").hashCode();
+		return (id << 32) + id;
 	}
 
 

@@ -2,9 +2,10 @@
 
 .classpath
 
-/bin
-/t3s/
-/WebSocket/
+bin
+bin/*
+t3s/
+WebSocket/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
