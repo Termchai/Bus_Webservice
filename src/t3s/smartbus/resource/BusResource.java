@@ -62,7 +62,7 @@ public class BusResource {
 
 	/**
 	 * Get all buses of particular line number.
-	 * @param id 
+	 * @param line 
 	 * @return HttpStatusCode
 	 */
 	@GET
@@ -89,8 +89,7 @@ public class BusResource {
 	@Produces ( {MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON} )
 	public Response getAllBuses()
 	{
-		GenericEntity<List<Bus>> entity;
-		entity = new GenericEntity<List<Bus>>(cache.findAll()) {};
+		GenericEntity<List<Bus>> entity = new GenericEntity<List<Bus>>(cache.findAll()) {};
 		System.out.println(entity.toString());
 		return Response.ok(entity).build();
 	}

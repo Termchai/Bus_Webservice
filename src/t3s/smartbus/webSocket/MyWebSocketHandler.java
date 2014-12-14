@@ -25,7 +25,7 @@ import t3s.smartbus.entity.Sessions;
 import t3s.smartbus.main.WebSocketMain;
 
 /**
- * 
+ * A class that handles web socket.
  * @author Termchai
  *
  */

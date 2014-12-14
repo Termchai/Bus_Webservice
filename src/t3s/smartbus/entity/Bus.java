@@ -104,9 +104,6 @@ public class Bus implements Serializable {
 		return contact.getId() == this.getId();
 	}
 	
-
-
-
 	@Override
 	public int hashCode() {
 		return (id << 32) + id;
