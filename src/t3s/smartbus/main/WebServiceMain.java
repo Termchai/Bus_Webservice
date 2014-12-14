@@ -17,7 +17,7 @@ public class WebServiceMain {
 	static Server server;
 
 	public static void main(String[] args) throws Exception {
-		
+    	System.out.println("WebService");
 		URL url = new URL("http://kusmartbus.netburzt.com/map/getbusposition");
 		BusMemoryCache cache = BusMemoryCache.getInstance(url);
 		

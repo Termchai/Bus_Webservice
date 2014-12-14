@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Date;
 import java.util.List;
 
 import javax.swing.Timer;
@@ -52,7 +53,8 @@ public class BusMemoryCache {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Update position");
+				Date date = new Date();
+				System.out.println("\nUpdate position at : " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
 				busList = busFactory.parseStringToBus(getTextFromUrl());
 				try {
 					if(MyWebSocketHandler.isRunning)

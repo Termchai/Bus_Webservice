@@ -64,7 +64,7 @@ public class MyWebSocketHandler {
     
     public static void broadcastBusesPosition(List<Bus> busList) throws Exception
     {
-    	System.out.println("\n " + ( new Date().toString()) + " " + Sessions.getSessionSet().toString() );
+    	System.out.println(Sessions.getSessionSet().toString() );
     	System.out.println(parseBusListToString(busList));
     	String busPosition = parseBusListToString(busList);
         Set<Session> set = Sessions.getSessionSet();
