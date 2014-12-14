@@ -1,5 +1,7 @@
 *.class
 
+.classpath
+
 /bin
 /t3s/
 /WebSocket/
