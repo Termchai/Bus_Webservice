@@ -16,7 +16,11 @@ import org.eclipse.jetty.websocket.server.WebSocketHandler;
 import WebSocket.MyWebSocketHandler;
 import t3s.smartbus.entity.Bus;
 
-
+/**
+ * Cache of the bus.
+ * @author Termchai
+ *
+ */
 public class BusMemoryCache {
 	
 	private final int UPDATE_INTERVAL = 15000;

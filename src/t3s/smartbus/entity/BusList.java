@@ -14,7 +14,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BusList {
+	
+	/** List of buses available. */
 	private List<Bus> list;
+	
 	public BusList()
 	{
 		

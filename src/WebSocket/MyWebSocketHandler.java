@@ -24,6 +24,12 @@ import t3s.smartbus.entity.BusList;
 import t3s.smartbus.entity.Sessions;
 import t3s.smartbus.main.WebSocketTest;
 
+/**
+ * 
+ * @author Termchai
+ *
+ */
+
 @WebSocket
 public class MyWebSocketHandler {
 	public static boolean isRunning = false;
