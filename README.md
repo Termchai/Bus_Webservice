@@ -29,7 +29,7 @@ Precondition: A user launch the application and the device has internet connecti
 
 ## Diagram
 
-[API](http://s22.postimg.org/6s3fs2ech/UML.png)
+[Diagram](http://s22.postimg.org/6s3fs2ech/UML.png)
 
 ## Mock-ups
 [MOCK-UPs](https://docs.google.com/document/d/1w64ER3QRmsLp7QozEOW7vYdqW8UT_938t3l1cfxjghA/edit?usp=sharing)
