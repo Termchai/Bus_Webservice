@@ -22,6 +22,7 @@ public class TestMain {
 		client.start();
 	} catch (Exception e) {
 		// TODO Auto-generated catch block
+		System.out.println("some error occurs");
 		e.printStackTrace();
 	}
 	
@@ -42,9 +43,9 @@ public class TestMain {
 			Bus bus = new Bus();
 			String[] temp2 = temp[i].split(">");
 			bus.setId(Long.parseLong(temp2[0].split("\"")[1]));
-			bus.setBusLineID((Integer.parseInt(temp2[2].split("<")[0])));
-			bus.setLat((Double.parseDouble(temp2[4].split("<")[0])));
-			bus.setLon(Double.parseDouble(temp2[6].split("<")[0]));
+			bus.setLineNumber((Integer.parseInt(temp2[2].split("<")[0])));
+			bus.setLatitude((Double.parseDouble(temp2[4].split("<")[0])));
+			bus.setLongitude(Double.parseDouble(temp2[6].split("<")[0]));
 			bus.setTimestamp(temp2[8].split("<")[0]);
 			busList.add(bus);
 		}

@@ -11,6 +11,14 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
+
+/**
+ * Bus with bus id, bus line number, location of the bus
+ * 		with latitude, longitude, and timestamp.
+ * @author Termchai, Supavit
+ *
+ */
+
 @XmlRootElement(name="bus")
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
@@ -26,8 +34,9 @@ public class Bus implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO) 
 	private long id;
 	
-	private int busLineID ;
-	private double lat, lon;
+	private int lineNumber;
+	private double latitude;
+	private double longitude;
 	private String timestamp;
 	
 	public Bus() {}
@@ -44,28 +53,28 @@ public class Bus implements Serializable {
 		return serialVersionUID;
 	}
 
-	public int getBusLineID() {
-		return busLineID;
+	public int getLineNumber() {
+		return lineNumber;
 	}
 
-	public void setBusLineID(int busLineID) {
-		this.busLineID = busLineID;
+	public void setLineNumber(int lineNumber) {
+		this.lineNumber = lineNumber;
 	}
 
-	public double getLat() {
-		return lat;
+	public double getLatitude() {
+		return this.latitude;
 	}
 
-	public void setLat(double lat) {
-		this.lat = lat;
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
 	}
 
-	public double getLon() {
-		return lon;
+	public double getLongitude() {
+		return longitude;
 	}
 
-	public void setLon(double lon) {
-		this.lon = lon;
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
 	}
 
 	public String getTimestamp() {
@@ -76,17 +85,17 @@ public class Bus implements Serializable {
 		this.timestamp = timestamp;
 	}
 
-	public Bus(int busID, int busLineID, double lat, double lon, String timestamp) {
+	public Bus(int busID, int lineNumber, double latitude, double longitude, String timestamp) {
 		this.id = busID;
-		this.busLineID = busLineID;
-		this.lat = lat;
-		this.lon = lon;
+		this.lineNumber = lineNumber;
+		this.latitude = latitude;
+		this.longitude = longitude;
 		this.timestamp = timestamp;
 	}
 
 	@Override
 	public String toString() {
-		return "ID:" + id + " Line:" + busLineID + " Lat:" + lat + " Long:" + lon + " Time:" + timestamp + "\n";
+		return "ID:" + id + " Line:" + lineNumber + " Lat:" + latitude + " Long:" + longitude + " Time:" + timestamp + "\n";
 	}
 	
 	public boolean equals(Object other) {
