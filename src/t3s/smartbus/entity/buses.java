@@ -13,22 +13,22 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class BusList {
+public class buses {
 	
 	/** List of buses available. */
-	private List<Bus> list;
+	private List<Bus> bus;
 	
-	public BusList()
+	public buses()
 	{
 		
 	}
 
 	public List<Bus> getList() {
-		return list;
+		return bus;
 	}
 
 	public void setList(List<Bus> list) {
-		this.list = list;
+		this.bus = list;
 	}
 	
 }

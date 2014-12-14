@@ -13,8 +13,8 @@ import javax.swing.Timer;
 
 import org.eclipse.jetty.websocket.server.WebSocketHandler;
 
-import WebSocket.MyWebSocketHandler;
 import t3s.smartbus.entity.Bus;
+import t3s.smartbus.webSocket.MyWebSocketHandler;
 
 /**
  * Cache of the bus.

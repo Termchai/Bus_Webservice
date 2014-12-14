@@ -9,9 +9,9 @@ import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 
 import t3s.smartbus.entity.Bus;
 import t3s.smartbus.memory.BusMemoryCache;
-import WebSocket.MyWebSocketHandler;
+import t3s.smartbus.webSocket.MyWebSocketHandler;
 
-public class WebSocketTest {
+public class WebSocketMain {
 	
 	public static List<Bus> getBuses() {
 		return null;

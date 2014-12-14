@@ -1,4 +1,4 @@
-package WebSocket;
+package t3s.smartbus.webSocket;
 import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
@@ -20,9 +20,9 @@ import org.eclipse.jetty.websocket.api.annotations.OnWebSocketMessage;
 import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 
 import t3s.smartbus.entity.Bus;
-import t3s.smartbus.entity.BusList;
+import t3s.smartbus.entity.buses;
 import t3s.smartbus.entity.Sessions;
-import t3s.smartbus.main.WebSocketTest;
+import t3s.smartbus.main.WebSocketMain;
 
 /**
  * 
@@ -35,8 +35,7 @@ public class MyWebSocketHandler {
 	public static boolean isRunning = false;
 	
 	public MyWebSocketHandler() {
-		System.out.println("sdsdcasdddddddddddddddddd");
-		List<Bus> buses = WebSocketTest.getBuses();
+		List<Bus> buses = WebSocketMain.getBuses();
 	}
 	
 	
@@ -76,13 +75,13 @@ public class MyWebSocketHandler {
         }
     }
     
-    private static String parseBusListToString (List<Bus> busList) throws Exception
+    private static String parseBusListToString (List<Bus> buses) throws Exception
     {
     	StringWriter writer = new StringWriter();
-		JAXBContext ctx = JAXBContext.newInstance( BusList.class );
+		JAXBContext ctx = JAXBContext.newInstance( buses.class );
 		Marshaller marshaller = ctx.createMarshaller();
-		BusList bl = new BusList();
-		bl.setList(busList);
+		buses bl = new buses();
+		bl.setList(buses);
 		marshaller.marshal(bl, writer);
 		return writer.toString();
     }

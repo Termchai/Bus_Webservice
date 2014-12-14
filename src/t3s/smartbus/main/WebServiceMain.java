@@ -12,7 +12,7 @@ import t3s.smartbus.memory.BusMemoryCache;
 public class WebServiceMain {
 	
 	 /*port of the webservice */
-	static final int PORT = 8080;
+	static final int PORT = 8081;
 	
 	static Server server;
 
