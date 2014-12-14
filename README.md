@@ -34,6 +34,9 @@ Precondition: A user launch the application and the device has internet connecti
 ## Mock-ups
 [MOCK-UPs](https://docs.google.com/document/d/1w64ER3QRmsLp7QozEOW7vYdqW8UT_938t3l1cfxjghA/edit?usp=sharing)
 
+## Github repository for Client (Android)
+[Client Repository](https://github.com/bigsis/Bus_Client)
+
 ## Stakeholders
 * Kasetsart Students,Staff, and visitors who use the KU bus service
 
